@@ -1,0 +1,169 @@
+.cards {
+    display: flex;
+    background-color: #F6FCFF;
+    width: 100%;
+}
+
+.cards__scroll {
+    display: flex;
+    padding: 8px 8px 0 8px;
+    background-color: #F6FCFF;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #4094F7 #D7EDFF;
+    cursor: grab;
+    width: 100%;
+    transform: rotate(180deg);
+    direction: rtl;
+}
+
+.cards__content {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 8px;
+    background-color: #F6FCFF;
+    padding: 0 0 20px 8px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    max-height: 792px;
+    scrollbar-color: #4094F7 #D7EDFF;
+}
+
+.cards__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 16px 16px 24px;
+    background-color: #FFF;
+    border-radius: 6px;
+    height: 80px;
+    margin: 0 6px 0 0;
+    transform: rotate(180deg);
+    direction: ltr;
+    min-width: 1406px;
+    /* если поставить min-width, например, 1700px, то скролл будет виден отчетливо */
+}
+
+.cards__card:hover {
+    border: 1px solid #9BCFFD;
+}
+
+.cards__container {
+    display: flex;
+    column-gap: 28px;
+
+}
+
+.cards__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.cards__wrapper_end {
+    align-items: flex-end;
+}
+
+.cards__wrapper_center {
+    align-items: center;
+}
+
+.cards__title {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #84919A;
+}
+
+.cards__id {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.084px;
+    color: #0E73F6;
+    position: relative;
+}
+
+.cards__id::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 48px;
+    background-color: #4094F7;
+    opacity: 0.2;
+    content: "";
+}
+
+.cards__cities {
+    display: flex;
+    column-gap: 4px;
+}
+
+.cards__tooltip-container {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    cursor: pointer;
+    padding-top: 2px;
+}
+
+.cards__tooltip {
+    width: 219px;
+    padding: 4px 8px;
+    display: flex;
+    border-radius: 4px;
+    background: #303940;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    position: absolute;
+    top: -66px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 2s;
+    color: #F6F8F9;
+}
+
+.cards__tooltip::after {
+    content: '';
+    position: absolute;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #303940 transparent transparent transparent;
+    bottom: -12px;
+}
+
+.cards__tooltip-container:hover .cards__tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.cards__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.084px;
+    color: #252C32;
+}
+
+.cards__text_ellipsis {
+    max-width: 562px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cards__docs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    border-radius: 10px;
+    background-color: #EEF0F2;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #5B6871
+}
