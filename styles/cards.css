@@ -82,6 +82,7 @@
     letter-spacing: -0.084px;
     color: #0E73F6;
     position: relative;
+    text-decoration: none;
 }
 
 .cards__id::after {
